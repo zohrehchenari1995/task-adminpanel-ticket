@@ -1,0 +1,226 @@
+@import url("/css/font.css");
+
+
+/* Reset */
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+:root{
+  --color-title:#1E1E1E;
+  --color-text-body:#1E1E1E;
+  --color-text-detail:#696969;
+  --color-description-button:#234894;
+  --color-number-button:#234894;
+  --color-secondary-button:#AFCEDD;
+  --color-primary-button:#219F95;
+  --color-white:#FFFFFF;
+  --border-radius-secondary:6px;
+  --border-radius-primary:8px;
+  --border-radius-ticket-section:30px
+}
+
+/* Font size */
+html{
+  font-size: 62.5%;
+}
+
+/* fonts */
+h2{
+  font-size: 2rem;
+}
+h3{
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width:768px){
+  h2{
+    font-size: 2.2rem;
+  }
+  h3{
+    font-size: 1.8rem;
+  }
+  .ticket__number{
+    font-size: 1.8rem;
+  }
+  .ticket__request-visit{
+    font-size: 1.5rem;
+  }
+  .ticket__description{
+    font-size: 1.6rem;
+  }
+  .ticket__date{
+    font-size: 1.2rem;
+  }
+  .membership__name{
+    font-size: 1.6rem;
+  }
+  .membership h3{
+    font-size: 1.5rem;
+  }
+  .ticket__title h2{
+    font-size: 1.8rem;
+  }
+}
+
+
+/* mobile approach */
+.admin-access{
+  margin-top: 80px;
+}
+.admin-panel{
+  box-shadow: 0 0 5px var(--color-primary-button,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.admin__Ticket-Section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,360px));
+  justify-content: center;
+  align-content: center ;
+  gap: 4rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-ticket-section);
+  grid-template-areas:
+  "ticket-title"
+  "Request-one"
+  "Request-two"
+  "Request-three"
+  "Request-four"
+  "Request-five"
+  "Request-six";
+}
+.ticket__title h2{
+  grid-area: ticket-title;
+  padding-top: 15px;
+}
+.membership-Request__One{
+  grid-area: Request-one;
+}
+.membership-Request__Two{
+  grid-area: Request-two;
+}
+.membership-Request__Three{
+  grid-area: Request-three;
+}
+.membership-Request__Four{
+  grid-area: Request-four;
+}
+.membership-Request__Five{
+  grid-area: Request-five;
+}
+.membership-Request__Six{
+  grid-area: Request-six;
+}
+.membership__description{
+  display: flex;
+  align-items: center;
+}
+.ticket__description{
+  margin-right: 5px;
+  color: var(--color-description-button);
+  font-size: 1.3rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.ticket__date{
+  text-align: center;
+  margin-right: 170px;
+  color: var(--color-text-detail);
+  font-size:1rem
+}
+h3{
+  margin-bottom: 12px;
+}
+.membership__text{
+  color: var(--color-text-body);
+}
+.membership__id{
+  color: var(--color-text-detail);
+  margin-right: 2px;
+}
+.membership__information{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.membership__information >img{
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 2px;
+    border-radius: var(--border-radius-secondary);
+}
+.membership__name{
+  margin-left: 70px;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+.ticket img{
+  cursor: pointer;
+}
+.membership h3{
+  font-size: 1.2rem;
+}
+/* Medium size approach*/
+@media screen and (min-width:768px) and (max-width:1279px){
+  .admin__Ticket-Section{
+    grid-template-areas: 
+    "ticket-title   ticket-title"
+    "Request-one    Request-two"
+    "Request-three  Request-four"
+    "Request-five   Request-six";
+  }
+}
+
+/* Large size approach */
+@media screen and (min-width:1280px){
+  .admin__Ticket-Section{
+    grid-template-areas: 
+    "ticket-title  ticket-title ticket-title"
+    "Request-one   Request-two  Request-three"
+    "Request-four  Request-five Request-six";
+  }
+}
+
+/* Button */
+.ticket__number,
+.ticket__request-visit{
+  outline: 0;
+  cursor: pointer;
+}
+.ticket__number{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  border-radius: var(--border-radius-secondary);
+  border: 1px solid var(--color-secondary-button);
+  background-color: var(--color-secondary-button);
+  color: var(--color-number-button);
+
+}
+.ticket__request-visit{
+  width: 130px;
+  height: 55px;
+  padding: 1rem 0.5rem;
+  border-radius: var(--border-radius-primary);
+  border: 1px solid var(--color-primary-button);
+  background-color: var(--color-primary-button);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
